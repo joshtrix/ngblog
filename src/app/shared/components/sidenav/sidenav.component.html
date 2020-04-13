@@ -1,0 +1,98 @@
+<mat-sidenav #sidenav mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true" (mouseenter)="increase()"
+    (mouseleave)="decrease()">
+    <div class="logomain"></div>
+    <!-- <mat-nav-list>
+      <mat-list-item routerLink="1" routerLinkActive="active" >
+        <mat-icon mat-list-icon>group</mat-icon>
+        <div fxFlex="2"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <div class="dropdown">
+            <button class="dropbtn">Grupos</button>
+            <div class="dropdown-content">
+            <a href="#">Nuevo grupo</a>
+            <a href="#">Consulta de grupo</a>
+           
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="2" routerLinkActive="active">
+        <mat-icon mat-list-icon>forum</mat-icon>
+        <div fxFlex="2"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <div class="dropdown">
+            <button class="dropbtn">Mensajes predefinidos</button>
+            <div class="dropdown-content">
+            <a href="#">Nuevo mensaje predefinido</a>
+            <a href="#">Consulta de mensaje predefinido</a>
+           
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="3" routerLinkActive="active">
+        <mat-icon mat-list-icon>send</mat-icon>
+        <div fxFlex="2"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <div class="dropdown">
+            <button class="dropbtn">Envío de mensajes</button>
+            <div class="dropdown-content">
+            <a href="#">Nuevo mensaje predefinido</a>
+            <a href="#">Consulta de mensaje predefinido</a>
+           
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+
+ -->
+
+    <!-- </mat-nav-list> -->
+    <mat-accordion>
+      <mat-expansion-panel>
+       <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon mat-list-icon> group </mat-icon>Grupos
+        </mat-panel-title>
+       </mat-expansion-panel-header>
+        <mat-action-row>
+         <button mat-button routerLink="/groups" routerLinkActive="active">Nuevo grupo</button>
+       </mat-action-row> 
+       <mat-action-row>
+        <button mat-button routerLink="/data-groups" routerLinkActive="active">Consulta de grupo</button>
+      </mat-action-row>        
+     
+     </mat-expansion-panel>
+     <mat-expansion-panel>
+      <mat-expansion-panel-header>
+       <mat-panel-title>
+         <mat-icon mat-list-icon> forum </mat-icon>Mensajes predefinidos
+       </mat-panel-title>
+      </mat-expansion-panel-header>
+       <mat-action-row>
+        <button mat-button routerLink="/predefinedMessages" routerLinkActive="active">Nuevo mensaje predefinido</button>
+      </mat-action-row>
+      <mat-action-row>
+        <button mat-button routerLink="/data-predefined-messages" routerLinkActive="active">Consulta de mensaje predefinido</button>
+      </mat-action-row>             
+    
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+       <mat-panel-title>
+        <mat-icon mat-list-icon> send </mat-icon>Envío de mensajes
+       </mat-panel-title>
+      </mat-expansion-panel-header>
+       <mat-action-row>
+        <button mat-button routerLink="/sending-messages" routerLinkActive="active">Mensaje individual</button>
+      </mat-action-row> 
+      <mat-action-row>
+        <button mat-button>Mensaje de grupo</button>
+      </mat-action-row>       
+    
+    </mat-expansion-panel>
+   </mat-accordion>
+
+  </mat-sidenav>

@@ -1,0 +1,39 @@
+// @import '~@angular/material/theming';
+
+// $primary: mat-palette($mat-indigo);
+
+footer {
+  margin-top: 20px;
+  background-color: #13368C;
+  flex-shrink: 0;
+  flex-grow: 0;
+  
+  // .box {
+  //   h3 {
+  //     color: white;
+  //   }
+  //   input{
+  //     color: white;
+  //   }
+  //   ul {
+  //     list-style: none;
+  //     margin: 0px;
+  //     padding: 0px;
+  //     li {
+  //       margin: 10px 0px;
+  //       a {
+  //         text-decoration: none;
+  //         color: white;
+  //       }
+  //     }
+  //   }
+  // }
+  
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.white-icon {
+  color: white;
+}

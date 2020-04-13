@@ -1,0 +1,50 @@
+<mat-toolbar class="header-toolbar new"  color="primary">
+  <mat-toolbar-row>
+    <div>
+      <div class="row between-xs middle-xs header-row">
+        <nav>
+          
+          <button mat-icon-button routerLink="/sidenav" routerLinkActive="active">
+            <mat-icon>
+              menu
+            </mat-icon>
+          </button>
+          <a mat-button routerLink="/home" routerLinkActive="active"><img src="../../../../assets/telcel-logo.svg" height="30px"></a>
+          <a mat-button routerLink="/about" routerLinkActive="active"><h6>Alarmas RI</h6></a>
+          
+        </nav>
+        <!-- <a routerLink="/home" mat-raised-button style="float:right"><mat-icon>close</mat-icon> Cerrar sesión</a> -->
+        <!-- <a routerLink="/order" mat-raised-button matBadgeColor="warn">
+          
+          Carrito
+        </a> -->
+      </div>
+     
+    </div>
+    <span class="example-spacer"></span>
+    <a routerLink="/login" mat-raised-button><mat-icon>close</mat-icon> Cerrar sesión</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<!-- <mat-toolbar color="primary">
+  <a routerLink="/">{{ appName }}</a>
+  <span class="fill-remaining-space"></span>
+  <a routerLink="/admin" routerLinkActive="active" *ngIf="authSvc.userData$ | async">
+    <button mat-button>Admin</button>
+  </a>
+
+  <a routerLink="/about" routerLinkActive="active">
+    <button mat-button><img src="../../../../assets/telcel-logo-azul.svg"></button>
+  </a>
+
+  <a *ngIf="authSvc.userData$ | async; else showLogin" (click)="onLogout()">
+    <button mat-button>Logout</button>
+  </a>
+
+  <ng-template #showLogin>
+    <a routerLink="/login" routerLinkActive="active">
+      <button mat-button>Login</button>
+    </a>
+  </ng-template>
+</mat-toolbar> -->
