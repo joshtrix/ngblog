@@ -40,6 +40,11 @@ const routes: Routes = [
       import('./components/pages/sending-messages/sending-messages.module').then(
         m => m.SendingMessagesModule) },
       {
+        path: 'data-sending-messages', loadChildren: () =>
+        import('./components/pages/sending-messages/data-sending-messages/data-sending-messages.module').then(
+            m => m.DataSendingMessagesModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'

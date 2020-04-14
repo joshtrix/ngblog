@@ -1,0 +1,76 @@
+<div class="container-contact100">
+    <div class="wrap-contact100">
+      <!-- <div mdcHeadline4>
+      <button
+        mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+        <span class="contact100-form-title">
+          Crear nuevo grupo
+        </span>
+      </div> -->
+      <div mdcHeadline4>
+        <button mat-icon-button routerLink="/home" routerLinkActive="active">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <span>
+          Envío de mensaje a grupo
+        </span>
+      </div>
+        <div class="wrap-input100 validate-input bg1">
+          <span class="label-input100">Grupo(s)</span>
+          <angular2-multiselect [data]="dropdownList" [(ngModel)]="selectedItems" 
+    [settings]="dropdownSettings" 
+    (onSelect)="onItemSelect($event)" 
+    (onDeSelect)="OnItemDeSelect($event)"
+    (onSelectAll)="onSelectAll($event)"
+    (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+          <!-- <div>
+            <form #f='ngForm' (ngSubmit)='resetForm(f)'>
+               <angular2-multiselect [data]="dropdownList" [(ngModel)]="selectedItems" 
+              [settings]="dropdownSettings" 
+              (onSelect)="onItemSelect($event)"
+            (onDeSelect)="OnItemDeSelect($event)" 
+            (onSelectAll)="onSelectAll($event)" 
+            (onDeSelectAll)="onDeSelectAll($event)" 
+            name='selectedItems'>
+          
+                <c-search>
+                    <ng-template>
+                        <input type="text" (keyup)="onSearch($event)" placeholder="Search countries" style="border: none;width: 100%; height: 100%;outline: none;" [ngModel] = 'searchField' (ngModelChange)="filterRecords($event)" name='searchField' ngModel/>
+                    </ng-template>
+               </c-search>
+          
+              </angular2-multiselect> 
+              
+            </form>
+          
+          </div> -->
+        </div>
+        
+        <div class="wrap-input100 validate-input bg1">
+            <span class="label-input100">Mensaje Predefinido</span>
+            <angular2-multiselect [data]="dropDownListMessages" [(ngModel)]="selectedItemsM" 
+    [settings]="dropdownSettingsMessages" 
+    (onSelect)="onItemSelectM($event)" 
+    (onDeSelect)="OnItemDeSelectM($event)"
+    (onSelectAll)="onSelectAll($event)"
+    (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+          </div>
+
+        <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
+          <span class="label-input100">MENSAJE</span>
+          <textarea class="input100" name="message" placeholder="Escribe el MENSAJE"></textarea>
+        </div>
+  
+        <div class="container-contact100-form-btn">
+          <button class="contact100-form-btn">
+            <span>
+              Enviar
+              <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      
+    </div>
+  </div>
