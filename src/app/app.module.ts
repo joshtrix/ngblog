@@ -10,11 +10,7 @@ import { MaterialModule } from './material.module';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 
-/* Firebase */
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+
 
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -42,19 +38,13 @@ import { AlertDialogComponent } from './shared/components/footer/alert-dialog.co
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    //AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireAuthModule,
     AppRoutingModule,
     NewPostModule,
     MaterialModule,
     ReactiveFormsModule,
     EditPostModule
   ],
-  providers: [
-    { provide: StorageBucket, useValue: 'gs://ngblog-eab58.appspot.com' }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

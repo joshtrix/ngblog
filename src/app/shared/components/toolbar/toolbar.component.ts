@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,11 +7,9 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ToolbarComponent implements OnInit {
   public appName = 'telcel';
-  constructor(public authSvc: AuthService) {}
+  constructor() {}
 
   ngOnInit() {}
 
-  onLogout(): void {
-    this.authSvc.logout();
-  }
+ 
 }
